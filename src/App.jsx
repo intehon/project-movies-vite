@@ -7,7 +7,7 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<MoviesList />} />
-        <Route path="/details/:movie_id" element={<Details />} /> 
+        <Route path="/movie/:movie_id" element={<Details />} /> 
       </Routes>
     </BrowserRouter>
   )

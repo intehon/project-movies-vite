@@ -1,13 +1,97 @@
-:root {
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: #fff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.moviesListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+.movieContainer {
+  width: 25%;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.movieImage {
+  width: 100%;
+}
+
+.movieOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
+  padding: 20px;
+}
+
+.movieContainer:hover .movieOverlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.posterBackground {
+  display: block;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.detailsContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieDetailsPoster {
+  border: 4px solid white;
+  margin: 40px 20px 0 50px;
+}
+
+.movieDetailsContainer {
+  display: flex;
+}
+
+.movieDetailsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.movieDetailsText p {
+  max-width: 400px;
+}
+
+.rating {
+  color: red;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.errorContainer {
+  display: grid;
+  place-items: center;
+  width: auto;
+}
+
