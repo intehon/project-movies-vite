@@ -186,3 +186,48 @@ code {
   transition: all 0.3s ease-in-out;
   transform: translateX(5px);
 }
+
+@media (max-width: 767px) {
+  .moviesListContainer {
+    display: block; 
+  }
+  .movieContainer {
+    width: 100%; 
+    margin-bottom: 10px;
+  }
+  .movieOverlay {
+    position: static; 
+    display: none; 
+    padding: 10px; 
+  }
+  .movieContainer:hover .movieOverlay {
+    display: none; 
+  }
+  .movieDetailsPoster {
+    margin: 20px 10px 0 10px;
+  }
+  .goBackContainer {
+    margin: 50px; 
+  }
+  .goBack {
+    font-size: 14px; 
+    margin: 5px 2px; 
+  }
+  .svgBack {
+    height: 15px;
+    width: 15px;
+  }
+  .movieDetailsContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  .movieDetailsPoster {
+    width: 80%; 
+    margin: 20px 0; 
+  }
+  .movieDetailsText {
+    align-items: center;
+    padding: 5px;
+  }
+}
