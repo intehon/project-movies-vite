@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { MoviesList } from './components/MoviesList'
 import { Details } from './components/Details'
-import { Loading } from './components/Loading'
 import { POPULAR_URL, TOP_URL, UPCOMING_URL, NOW_URL } from './utils/urls'
 
 export const App = () => {
@@ -24,7 +23,7 @@ export const App = () => {
 
   useEffect(() => { 
     setLoading(true)
-    fetch(URL )
+    fetch(URL)
     .then((res) => res.json())
     .then((data) => setMovies(data.results))
     .finally(() => setTimeout(() => setLoading(false), 1000)
