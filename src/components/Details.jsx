@@ -54,10 +54,12 @@
                             alt={details.title}
                             />
                             <div className='movieDetailsText'>
-                            <h2>{details.title} {" "}
-                            <span className="rating">{rating}/10</span>
-                            </h2>
-                            <p>{details.overview}</p>
+                            <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', color: 'white', padding: '5px', borderRadius: '5px' }}>
+                                <h2>{details.title} {" "}
+                                <span className="rating">{rating}/10</span>
+                                </h2>
+                                <p>{details.overview}</p>
+                            </div>
                             </div>
                         </div>
                     </div>
